@@ -6,7 +6,9 @@ export default function Navigation() {
     <nav className="grow">
       <ul className="flex gap-x-9">
         {navItems.map((item) => (
-          <NavLink navLink={item} key={item.href} />
+          <li key={item.href}>
+            <NavLink navLink={item} />
+          </li>
         ))}
       </ul>
     </nav>
