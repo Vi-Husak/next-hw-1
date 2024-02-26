@@ -1,10 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import Logo from "@/components/Logo";
+import Logo from "@/components/Logo/Logo";
 import navItems from "@/utils/navItems";
-import NavLink from "@/components/NavLink";
-import Socials from "@/components/Socials";
+import NavLink from "@/components/NavLink/NavLink";
+import SmallFootText from "@/components/Footer/SmallFootText";
+import Socials from "@/components/Footer/Socials";
 
 import socialItems from "@/utils/socialItems";
 
@@ -15,12 +16,10 @@ export default function Footer() {
         <Logo />
         <div>
           <address className="not-italic">
-            <p className="text-xs text-[#707C87]">
-              04128, м.Київ, вул. Хрещатик, 19
-            </p>
+            <SmallFootText>04128, м.Київ, вул. Хрещатик, 19</SmallFootText>
           </address>
-          <p className="text-xs text-[#707C87]">Ліцензія НБУ №156 </p>
-          <p className="text-xs text-[#707C87]">Ⓒ ПАТ ЧіпЧендж, 2019-2023</p>
+          <SmallFootText>Ліцензія НБУ №156</SmallFootText>
+          <SmallFootText>Ⓒ ПАТ ЧіпЧендж, 2019-2023</SmallFootText>
         </div>
       </div>
       <nav>
@@ -46,7 +45,7 @@ export default function Footer() {
         <Link href="tel:3773" className="font-medium ">
           3773
         </Link>
-        <p className="text-xs text-[#707C87]">Цілодобова підтримка</p>
+        <SmallFootText>Цілодобова підтримка</SmallFootText>
       </div>
       <div className="flex flex-col gap-y-1.5 relative">
         <Image
@@ -60,8 +59,9 @@ export default function Footer() {
           8 800 111 22 33
         </Link>
         <div>
-          <p className="text-xs text-[#707C87]">Безкштовно для дзвінків</p>
-          <p className="text-xs text-[#707C87]">в межах України</p>
+          <SmallFootText>
+            Безкштовно для дзвінків <br /> в межах України
+          </SmallFootText>
         </div>
       </div>
       <div>
