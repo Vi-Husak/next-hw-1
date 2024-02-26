@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+import Banner from "@/components/Banner/Banner";
 
 const roboto = Roboto({ weight: "400", subsets: ["latin"] });
 
@@ -19,6 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${roboto.className} flex flex-col min-h-screen`}>
         <Header />
+        <Banner />
         <main className="grow">{children}</main>
         <Footer />
       </body>
