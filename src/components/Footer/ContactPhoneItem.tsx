@@ -1,3 +1,5 @@
+import React from "react";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -6,7 +8,7 @@ import SmallText from "./SmallText";
 interface ContactPhoneItemProps {
   phoneNumber: string;
   iconSrc?: string;
-  text?: string;
+  text?: React.ReactNode;
 }
 
 export default function ContactPhoneItem({
@@ -25,7 +27,10 @@ export default function ContactPhoneItem({
           className="absolute -left-9 top-1"
         />
       )}
-      <Link href={`tel:${phoneNumber}`} className="font-medium ">
+      <Link
+        href={`tel:${phoneNumber.replace(/\s/g, "")}`}
+        className="font-medium "
+      >
         {phoneNumber}
       </Link>
       {text && <SmallText>{text}</SmallText>}

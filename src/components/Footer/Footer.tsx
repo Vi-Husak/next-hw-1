@@ -7,7 +7,7 @@ import Socials from "./Socials";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#f6f7ff] px-[7.3%] py-14 flex justify-between items-start">
+    <footer className="bg-[#f6f7ff] px-[7.3%] py-14 flex justify-between items-start gap-x-10">
       <div className="flex flex-col gap-y-4">
         <Logo />
         <AddressBlock />
@@ -19,9 +19,13 @@ export default function Footer() {
         text="Цілодобова підтримка"
       />
       <ContactPhoneItem
-        phoneNumber="88001112233"
+        phoneNumber="8 800 111 22 33"
         iconSrc="/phone.svg"
-        text="Безкоштовно для дзвінків в межах України"
+        text={
+          <>
+            Безкоштовно для дзвінків <br /> в межах України
+          </>
+        }
       />
       <Socials />
     </footer>
