@@ -6,11 +6,9 @@ export default function Navigation() {
     <nav>
       <ul className="flex flex-col gap-y-3">
         {navItems.map((item) => (
-          <NavLink
-            navLink={item}
-            key={item.href}
-            extraClasses="font-medium text-base"
-          />
+          <li key={item.href}>
+            <NavLink navLink={item} extraClasses="font-medium text-base" />
+          </li>
         ))}
       </ul>
     </nav>
