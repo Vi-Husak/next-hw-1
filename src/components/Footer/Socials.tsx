@@ -1,12 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { SocialItem } from "@/utils/socialItems";
+import socialItems, { SocialItem } from "@/utils/socialItems";
 
-interface NavItemProps {
-  socialItems: SocialItem[];
-}
-
-export default function Socials({ socialItems }: NavItemProps) {
+export default function Socials() {
   return (
     <ul className="flex gap-x-4 items-center">
       {socialItems.map(({ href, icon, alt }) => (
